@@ -5,25 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Post</title>
   </head>
+
+  <style>
+    .form__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      border: none;
+      background: gray;
+      padding: 10px 20px;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background: rgb(70, 70, 70);
+    }
+  </style>
   <body>
-    <h1>Create Post</h1>
-    <form action="/create/submit">
-      <div>
-        <label for="title"
-          >Title<input name="title" id="title" type="text"
-        /></label>
-      </div>
-      <div>
-        <label for="postText"
-          >post Text<input name="postText" id="postText" type="text"
-        /></label>
-      </div>
-      <div>
-        <label for="author"
-          >Author<input name="author" id="author" type="text"
-        /></label>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="form__container">
+      <h1>Create Post</h1>
+      <form action="/create/submit">
+        <div>
+          <label for="title"
+            >Title: <input name="title" id="title" type="text"
+          /></label>
+        </div>
+        <div>
+          <label for="postText"
+            >Text: <input name="postText" id="postText" type="text"
+          /></label>
+        </div>
+        <div>
+          <label for="author"
+            >Author: <input name="author" id="author" type="text"
+          /></label>
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
